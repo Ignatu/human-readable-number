@@ -33,7 +33,11 @@ module.exports = function toReadable (number) {
     number[0] = 'nine hundred'
     }
   /* second number*/
+  if (number[1] === '0'){number.splice(1,1)} else
   if (number[1] === '1'){
+    if (number[2] === '0'){
+      number[1] = 'ten'; number.splice(2,1)
+      } else
     if (number[2] === '1'){
       number[1] = 'eleven'; number.splice(2,1)
       } else
@@ -87,6 +91,9 @@ module.exports = function toReadable (number) {
   number[1] = 'ninety'
   }
   /* third number*/
+  if (number[2] === '0'){
+    number.splice(2,1)
+    } else
   if (number[2] === '1'){
     number[2] = 'one'
     } else
@@ -119,6 +126,9 @@ module.exports = function toReadable (number) {
 if (number.length === 2){
   /* first number*/
   if (number[0] === '1'){
+     if (number[1] === '0'){
+      number[0] = 'ten'; number.splice(1,1)
+      } else
     if (number[1] === '1'){
       number[0] = 'eleven'; number.splice(1,1)
       } else
@@ -172,6 +182,9 @@ if (number.length === 2){
   number[0] = 'ninety'
   }
   /* second number*/
+if (number[1] === '0'){
+  number.splice(1,1)
+  } else
 if (number[1] === '1'){
   number[1] = 'one'
   } else
@@ -202,6 +215,9 @@ if (number[1] === '9'){
 }
   /* 3 stage */
 if (number.length === 1){
+if (number[0] === '0'){
+  number[0] = 'zero'
+  } else
 if (number[0] === '1'){
   number[0] = 'one'
   } else
