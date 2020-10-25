@@ -65,7 +65,7 @@ module.exports = function toReadable (number) {
     if (number[2] === '9'){
       number[1] = 'nineteen'; number.splice(2,1)
       }
-    }
+    } else
   if (number[1] === '2'){
     number[1] = 'twenty'
     } else
@@ -156,7 +156,7 @@ if (number.length === 2){
     if (number[1] === '9'){
       number[0] = 'nineteen'; number.splice(1,1)
       }
-    }
+    } else
   if (number[0] === '2'){
     number[0] = 'twenty'
     } else
